@@ -1,0 +1,34 @@
+$blue-scheme: (
+  "name": "blue",
+
+  "primary-bg": var(--color-blue-500),
+  "primary-color": var(--color-white),
+  "primary-hover-bg": var(--color-blue-600),
+
+  "secondary-bg": var(--color-transparent),
+  "secondary-color": var(--color-blue-600),
+  "secondary-hover-bg": var(--color-blue-50),
+
+  "ghost-bg": var(--color-transparent),
+  "ghost-color": var(--color-blue-600),
+  "ghost-hover-bg": var(--color-blue-50),
+);
+
+$red-scheme: (
+  "name": "red",
+
+  "primary-bg": var(--color-red-500),
+  "primary-color": var(--color-white),
+  "primary-hover-bg": var(--color-red-600),
+
+  "secondary-bg": var(--color-transparent),
+  "secondary-color": var(--color-red-600),
+  "secondary-hover-bg": var(--color-red-50),
+
+  "ghost-bg": var(--color-transparent),
+  "ghost-color": var(--color-red-600),
+  "ghost-hover-bg": var(--color-red-50),
+);
+
+
+$color-schemes: $blue-scheme, $red-scheme;

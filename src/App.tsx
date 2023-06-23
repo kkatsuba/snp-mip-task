@@ -1,11 +1,11 @@
-import { Box } from '@chakra-ui/react'
 import React from 'react'
+import styles from './app.module.scss'
 import { Header } from './components/header/header'
 
 export const App = () => {
   return (
-    <Box maxW={1000} mx="auto" my={50}>
+    <div className={styles.container}>
       <Header />
-    </Box>
+    </div>
   )
 }
