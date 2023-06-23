@@ -1,0 +1,66 @@
+@import "../../styles/variables.scss";
+@import "../../styles/color-scheme.scss";
+
+.inputGroup {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  .inputLeftElement {
+    right: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+.input {
+  width: 100%;
+  min-width: 0px;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  position: relative;
+  appearance: none;
+  transition-property: border-color, box-shadow;
+  transition-duration: 200ms;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-color: inherit;
+  background: inherit;
+
+  &:focus-visible {
+    border-color: var(--color-blue-500);
+    box-shadow: 0 0 0 1px var(--color-blue-500);
+  }
+
+  &.withRightIcon {
+    padding-inline-end: 2rem;
+  }
+
+  &.lg {
+    font-size: 1.125rem;
+    height: 3rem;
+  }
+
+  &.md {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+
+  &.sm {
+    font-size: 0.875rem;
+    height: 2rem;
+  }
+}
