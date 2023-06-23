@@ -1,0 +1,40 @@
+.accordion {
+  display: grid;
+  gap: 2rem;
+  border-color: var(--color-gray-400);
+
+  .accordionItem {
+    border-width: 1px;
+    border-color: inherit;
+    overflow-anchor: none;
+
+    .accordionHeader {
+      display: flex;
+      align-items: center;
+      border-color: inherit;
+      padding-inline-start: 1rem;
+      padding-inline-end: 1rem;
+
+      .accordionHeaderButton {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        outline: transparent solid 2px;
+        outline-offset: 2px;
+        font-size: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    .accordionPanel {
+      border-top-width: 1px;
+      border-color: inherit;
+      padding: 1.5rem;
+    }
+  }
+
+  .accordionItem:last-of-type {
+    border-bottom-width: 1px;
+  }
+}

@@ -18,7 +18,7 @@ export const SearchInput = (props: Props) => {
 
   return (
     <InputGroup>
-      <Input value={value} onChange={onInputChange} />
+      <Input value={value} onChange={onInputChange} placeholder="Client search" />
       <InputRightElement>
         <span>🔎</span>
       </InputRightElement>

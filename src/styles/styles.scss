@@ -1,2 +1,7 @@
 @import "./css-reset.scss";
 @import "./variables.scss";
+
+
+body {
+  color: var(--color-gray-700);
+}
