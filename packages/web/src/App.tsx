@@ -4,8 +4,10 @@ import { Header } from './components/header/header'
 
 export const App = () => {
   return (
-    <div className={styles.container}>
-      <Header />
+    <div>
+      <div className={styles.container}>
+        <Header />
+      </div>
     </div>
   )
 }
