@@ -1,0 +1,42 @@
+.loader {
+  width: 48px;
+  height: 48px;
+  animation: 2s linear 0s infinite normal none running loader-animation;
+
+  .track {
+    fill: var(--color-transparent);
+    stroke: rgb(237, 235, 233);
+  }
+
+  .progress {
+    fill: var(--color-transparent);
+    stroke: var(--color-blue-300);
+    animation: 1.5s linear 0s infinite normal none running loader-progress-animation;
+  }
+
+  @keyframes loader-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loader-progress-animation {
+    0% {
+      stroke-dasharray: 1, 400;
+      stroke-dashoffset: 0;
+    }
+
+    50% {
+      stroke-dasharray: 400, 400;
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dasharray: 400, 400;
+      stroke-dashoffset: -260;
+    }
+  }
+}

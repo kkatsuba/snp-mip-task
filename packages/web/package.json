@@ -2,9 +2,6 @@
   "name": "@snp-mip/web",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -13,9 +10,12 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
+    "@reduxjs/toolkit": "^1.9.5",
     "classnames": "^2.3.2",
+    "notistack": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
     "sass": "^1.63.6",
     "web-vitals": "^2.1.0"
   },
