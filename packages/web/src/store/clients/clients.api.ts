@@ -1,14 +1,12 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { ClientResponse } from '../../types/client'
+import { apiSlice } from '../api.slice'
+import { openSnackbar } from '../snackbar/snackbar.slice'
 
-export const clientsApiSlice = createApi({
-  reducerPath: 'clientsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: `${process.env.REACT_APP_API_URL}/clients` }),
-  tagTypes: ['Clients'],
+export const clientsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getClients: builder.query<ClientResponse[], void>({
       query: () => ({
-        url: '',
+        url: '/clients',
       }),
       providesTags: ['Clients'],
       transformResponse: (clients: ClientResponse[]) => {
@@ -20,7 +18,7 @@ export const clientsApiSlice = createApi({
     }),
     addNewClient: builder.mutation<ClientResponse, Omit<ClientResponse, 'id'>>({
       query: (payload) => ({
-        url: '',
+        url: '/clients',
         method: 'POST',
         body: payload,
         headers: {
@@ -32,17 +30,30 @@ export const clientsApiSlice = createApi({
       },
       // invalidatesTags: ['Clients'],
       async onQueryStarted(_, { dispatch, queryFulfilled }) {
-        const { data } = await queryFulfilled
-        dispatch(
-          clientsApiSlice.util.updateQueryData('getClients', undefined, (draft) => {
-            return draft.concat(data)
-          }),
-        )
+        try {
+          const { data } = await queryFulfilled
+          dispatch(
+            openSnackbar({
+              message: `Client "${data.name}" succesfully added`,
+              variant: 'success',
+            }),
+          )
+          dispatch(
+            clientsApiSlice.util.updateQueryData('getClients', undefined, (draft) => {
+              return draft.concat({
+                ...data,
+                addedAt: new Date(data.addedAt).toLocaleString(),
+              })
+            }),
+          )
+        } catch {
+          // noop
+        }
       },
     }),
-    removeClient: builder.mutation<ClientResponse, number>({
+    removeClient: builder.mutation<void, number>({
       query: (payload) => ({
-        url: `/${payload}`,
+        url: `/clients/${payload}`,
         method: 'DELETE',
       }),
       transformErrorResponse: (error) => {
@@ -50,12 +61,22 @@ export const clientsApiSlice = createApi({
       },
       // invalidatesTags: ['Clients'],
       async onQueryStarted(id, { dispatch, queryFulfilled }) {
-        await queryFulfilled
-        dispatch(
-          clientsApiSlice.util.updateQueryData('getClients', undefined, (draft) => {
-            return draft.filter((x) => x.id !== id)
-          }),
-        )
+        try {
+          await queryFulfilled
+          dispatch(
+            openSnackbar({
+              message: `Client #${id} removed`,
+              variant: 'success',
+            }),
+          )
+          dispatch(
+            clientsApiSlice.util.updateQueryData('getClients', undefined, (draft) => {
+              return draft.filter((x) => x.id !== id)
+            }),
+          )
+        } catch {
+          // noop
+        }
       },
     }),
   }),

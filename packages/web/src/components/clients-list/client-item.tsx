@@ -4,6 +4,7 @@ import { ClientResponse } from '../../types/client'
 import { AccordionButton, AccordionHeader, AccordionItem, AccordionPanel } from '../accordion'
 import { AccordionIcon } from '../accordion/accordion-icon'
 import { Button } from '../button/button'
+import { ClientPanel } from '../client-panel/client-panel'
 
 type Props = ClientResponse
 
@@ -16,7 +17,7 @@ export const ClientItem = (props: Props) => {
       <AccordionHeader>
         <AccordionIcon />
         <AccordionButton>
-          {name} ({addedAt})
+          #{id} {name} ({addedAt})
         </AccordionButton>
         <Button
           variant="ghost"
@@ -27,7 +28,9 @@ export const ClientItem = (props: Props) => {
           ❌
         </Button>
       </AccordionHeader>
-      <AccordionPanel>TODO</AccordionPanel>
+      <AccordionPanel>
+        <ClientPanel {...props} />
+      </AccordionPanel>
     </AccordionItem>
   )
 }

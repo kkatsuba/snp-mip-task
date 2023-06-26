@@ -1,8 +1,8 @@
 import { SnackbarProvider, useSnackbar } from 'notistack'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { closeSnackbar as closeSnackbarAction } from '../../store/snackbar/snackbar.actions'
 import { getSnackbars } from '../../store/snackbar/snackbar.selector'
+import { closeSnackbar as closeSnackbarAction } from '../../store/snackbar/snackbar.slice'
 
 const UseSnackbar = () => {
   const dispatch = useDispatch()

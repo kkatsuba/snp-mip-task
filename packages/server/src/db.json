@@ -1,4 +1,97 @@
 {
-  "clients": [],
-  "reports": []
+  "clients": [
+    {
+      "name": "Past Deepest",
+      "addedAt": "Sun, 25 Jun 2023 16:09:27 GMT",
+      "id": 7
+    },
+    {
+      "name": "Close Gun",
+      "addedAt": "Sun, 25 Jun 2023 16:09:31 GMT",
+      "id": 8
+    },
+    {
+      "name": "Mew Sick",
+      "addedAt": "Sun, 25 Jun 2023 16:09:41 GMT",
+      "id": 10
+    },
+    {
+      "name": "Multi Racer",
+      "addedAt": "Sun, 25 Jun 2023 16:09:45 GMT",
+      "id": 11
+    },
+    {
+      "name": "Mine Cool",
+      "addedAt": "Sun, 25 Jun 2023 16:09:49 GMT",
+      "id": 12
+    },
+    {
+      "name": "Extreme Dev",
+      "addedAt": "Sun, 25 Jun 2023 16:09:51 GMT",
+      "id": 13
+    },
+    {
+      "name": "Theme Trapper",
+      "addedAt": "Sun, 25 Jun 2023 16:09:54 GMT",
+      "id": 14
+    },
+    {
+      "name": "Capt Recon",
+      "addedAt": "Sun, 25 Jun 2023 16:14:28 GMT",
+      "id": 15
+    },
+    {
+      "name": "Rotten Bubble",
+      "addedAt": "Sun, 25 Jun 2023 16:14:50 GMT",
+      "id": 16
+    },
+    {
+      "name": "Cash Melting",
+      "addedAt": "Sun, 25 Jun 2023 16:44:04 GMT",
+      "id": 17
+    },
+    {
+      "name": "Big Soar",
+      "addedAt": "Sun, 25 Jun 2023 16:46:16 GMT",
+      "id": 18
+    },
+    {
+      "name": "Big Soar",
+      "addedAt": "Sun, 25 Jun 2023 16:46:16 GMT",
+      "id": 19
+    },
+    {
+      "name": "Seal Boy",
+      "addedAt": "Sun, 25 Jun 2023 21:10:32 GMT",
+      "id": 20
+    },
+    {
+      "name": "Force Echo",
+      "addedAt": "Mon, 26 Jun 2023 15:27:53 GMT",
+      "id": 21
+    },
+    {
+      "name": "Rend Recon",
+      "addedAt": "Mon, 26 Jun 2023 15:28:01 GMT",
+      "id": 22
+    },
+    {
+      "name": "Uno Uno",
+      "addedAt": "Mon, 26 Jun 2023 16:50:58 GMT",
+      "id": 23
+    }
+  ],
+  "reports": [
+    {
+      "clientId": 7,
+      "items": [
+        {
+          "id": 2,
+          "type": "square"
+        }
+      ],
+      "addedAt": "Mon, 26 Jun 2023 17:39:32 GMT",
+      "id": 1
+    }
+  ]
 }

@@ -1,3 +1,5 @@
+import { random } from './random'
+
 const nameList = [
   'Time',
   'Past',
@@ -176,7 +178,7 @@ const nameList = [
 ]
 
 export const randomName = () => {
-  const firstName = nameList[Math.floor(Math.random() * nameList.length)]
-  const lastName = nameList[Math.floor(Math.random() * nameList.length)]
+  const firstName = nameList[random(0, nameList.length)]
+  const lastName = nameList[random(0, nameList.length)]
   return `${firstName} ${lastName}`
 }

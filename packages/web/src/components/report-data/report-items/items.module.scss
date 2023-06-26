@@ -1,0 +1,51 @@
+.circle {
+  background: var(--color-pink-700);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: var(--color-green-700);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid var(--color-purple-700);
+  border-right: 100px solid transparent;
+}
+
+.hexagon {
+  width: 100px;
+  height: 50px;
+  background: var(--color-cyan-700);
+  position: relative;
+  margin: 25px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid var(--color-cyan-700);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid var(--color-cyan-700);
+  }
+}

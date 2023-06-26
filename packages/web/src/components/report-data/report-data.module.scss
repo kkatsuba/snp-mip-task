@@ -1,0 +1,19 @@
+.reportData {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(0, 0, 0, 0.1) 0px 25px 50px 0px;
+
+  .reportDataIndex {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+  }
+
+  .reportDataRemoveButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
